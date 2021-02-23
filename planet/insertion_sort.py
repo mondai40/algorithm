@@ -1,5 +1,5 @@
 def insertion_sort(nums):
-    for i in range(len(nums)):
+    for i in range(1, len(nums)):
         target = nums[i]
         j = i - 1
         while target < nums[j] and j >= 0:
