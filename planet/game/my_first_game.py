@@ -12,3 +12,10 @@ screen = pygame.display.set_mode(screen_size)
 #you need to move this image, so create a variable
 #If you have many images to load, you had better criate a function or class
 background = pygame.image.load("./background.jpg");
+
+#ste5. display image on the game screen
+#.bilt() stands for block image transfer
+#the second parameter is coordinate
+screen.blit(background, [0, 0])
+
+} 
