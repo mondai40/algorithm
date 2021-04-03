@@ -16,6 +16,22 @@ background = pygame.image.load("./background.jpg");
 #ste5. display image on the game screen
 #.bilt() stands for block image transfer
 #the second parameter is coordinate
-screen.blit(background, [0, 0])
+#screen.blit(background, [0, 0])
 
-} 
+#step6. create game loop => loop displaying image
+#keep_alive = True
+#while keep_alive:
+#	screen.blit(background, [0,0])
+#	pygame.display.update() 
+
+#step7. load a spaceship and a bullet image
+#blit a bullet first, followed by spaceship,
+#because the bullet should be hide behind spaceship
+spaceship = pygame.image.load('./rocket-2442125_640.png')
+bullet = pygame.image.load('./bullet-310444_640.png')
+keep_alive = True
+while keep_alive:
+	screen.blit(background, [0, 0])
+	screen.blit(bullet, [180, 500])
+	screen.blit(spaceship, [160, 500])
+	pygame.display.update()
