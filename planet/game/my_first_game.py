@@ -39,16 +39,30 @@ bullet = pygame.image.load('./bullet-310444_640.png')
 #step8. activate evet listenr
 #step9. collect all keys
 #step10. listen and check the pressed key
+#step11. load alien
+#step12. make animation direction and animation move steps
+alien = pygame.image.load('./alien.png')
 keep_alive = True
+alien_x = 140
+move_direction = "right"
 while keep_alive:
 	pygame.event.get();
 
 	keys = pygame.key.get_pressed()
-
 	if keys[pygame.K_SPACE] == True:
 		print("Space is typed")
+
+	if move_direction == "right":
+		alien_x += 1
+		if alien_x == 300:
+			move_direction = "left"
+	else:
+		alien_x -= 1
+		if alien_x == 0:
+			move_direction = "right"
 	
 	screen.blit(background, [0, 0])
+	screen.blit(alien, [alien_x, 50])
 	screen.blit(bullet, [180, 500])
 	screen.blit(spaceship, [160, 500])
 	pygame.display.update()
