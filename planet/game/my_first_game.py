@@ -29,8 +29,25 @@ background = pygame.image.load("./background.jpg");
 #because the bullet should be hide behind spaceship
 spaceship = pygame.image.load('./rocket-2442125_640.png')
 bullet = pygame.image.load('./bullet-310444_640.png')
+#keep_alive = True
+#while keep_alive:
+#	screen.blit(background, [0, 0])
+#	screen.blit(bullet, [180, 500])
+#	screen.blit(spaceship, [160, 500])
+#	pygame.display.update()
+
+#step8. activate evet listenr
+#step9. collect all keys
+#step10. listen and check the pressed key
 keep_alive = True
 while keep_alive:
+	pygame.event.get();
+
+	keys = pygame.key.get_pressed()
+
+	if keys[pygame.K_SPACE] == True:
+		print("Space is typed")
+	
 	screen.blit(background, [0, 0])
 	screen.blit(bullet, [180, 500])
 	screen.blit(spaceship, [160, 500])
