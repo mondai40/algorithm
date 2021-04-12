@@ -11,7 +11,7 @@ screen = pygame.display.set_mode(screen_size)
 #step4. load a image
 #you need to move this image, so create a variable
 #If you have many images to load, you had better criate a function or class
-background = pygame.image.load("./background.jpg");
+background = pygame.image.load("./background.jpg")
 
 #ste5. display image on the game screen
 #.bilt() stands for block image transfer
@@ -22,7 +22,7 @@ background = pygame.image.load("./background.jpg");
 #keep_alive = True
 #while keep_alive:
 #	screen.blit(background, [0,0])
-#	pygame.display.update() 
+#	pygame.display.update()
 
 #step7. load a spaceship and a bullet image
 #blit a bullet first, followed by spaceship,
@@ -46,7 +46,7 @@ keep_alive = True
 alien_x = 140
 move_direction = "right"
 while keep_alive:
-	pygame.event.get();
+	pygame.event.get()
 
 	keys = pygame.key.get_pressed()
 	if keys[pygame.K_SPACE] == True:
@@ -60,7 +60,7 @@ while keep_alive:
 		alien_x -= 1
 		if alien_x == 0:
 			move_direction = "right"
-	
+
 	screen.blit(background, [0, 0])
 	screen.blit(alien, [alien_x, 50])
 	screen.blit(bullet, [180, 500])
