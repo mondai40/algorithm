@@ -14,8 +14,8 @@ background = pygame.image.load("./background.jpg")
 #step7. load a spaceship and a bullet image
 #blit a bullet first, followed by spaceship,
 #because the bullet should be hide behind spaceship
-# spaceship = pygame.image.load("./rocket-2442125_640.png")
-# bullet = pygame.image.load("./bullet-310444_640.png")
+spaceship = pygame.image.load("./rocket-2442125_640.png")
+bullet = pygame.image.load("./bullet-310444_640.png")
 # keep_alive = True
 # while keep_alive:
 # 	screen.blit(background, [0, 0])
@@ -36,5 +36,7 @@ while keep_alive:
   if (keys[pygame.K_SPACE] == True): print("Space is typed")
 
   screen.blit(background, [0, 0])
-  pygame.display.update()
+	screen.blit(bullet, [50, 400])
+	screen.blit(spaceship, [20, 400])
+	pygame.display.update()
 
