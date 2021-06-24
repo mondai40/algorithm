@@ -23,3 +23,5 @@ fileObj.write("goodbye world")
 # *** pointer will start at the eof, so all the previous content will not be overwritten ***
 fileObj.write("It's Wednesday")
 
+# close file
+fileObj.close()
